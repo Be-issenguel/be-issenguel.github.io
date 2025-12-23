@@ -81,3 +81,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const skillsSection = document.getElementById('habilidades');
     if (skillsSection) observer.observe(skillsSection);
 });
+
+// Adicione ao seu script.js existente
+function highlightCode() {
+    const codeElement = document.querySelector('.code-snippet code');
+    if (!codeElement) return;
+    
+    const code = codeElement.textContent;
+    
+    // Colorir as palavras-chave (simples)
+    let highlighted = code
+        .replace(/\b(import|from|class|def|__init__|return|if|else|for|in)\b/g, '<span class="keyword">$1</span>')
+        .replace(/\b(MySkills|build_solutions)\b/g, '<span class="class">$1</span>')
+        .replace(/\b(self\.\w+)\b/g, '<span class="function">$1</span>')
+        .replace(/(".*?"|'.*?')/g, '<span class="string">$1</span>')
+        .replace(/\b(\d+)\b/g, '<span class="number">$1</span>');
+    
+    codeElement.innerHTML = highlighted;
+}
+
+// Chame quando a página carregar
+document.addEventListener('DOMContentLoaded', highlightCode);
