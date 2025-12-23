@@ -1,0 +1,75 @@
+/* Variáveis do tema ML/Developer */
+:root {
+    --python-blue: #3776AB;
+    --django-green: #092E20;
+    --ml-purple: #7E57C2;
+    --data-orange: #FF6B35;
+    --dark-bg: #0F172A;
+    --light-bg: #F8FAFC;
+    --text-dark: #1E293B;
+    --text-light: #64748B;
+}
+
+/* Estilos específicos para o perfil ML */
+.hero {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, #1E3A8A 100%);
+    color: white;
+    padding: 120px 0;
+}
+
+.code-snippet {
+    background: #1E293B;
+    border-radius: 10px;
+    padding: 20px;
+    border-left: 4px solid var(--python-blue);
+    font-family: 'Fira Code', monospace;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+.code-snippet code {
+    color: #E2E8F0;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Badges para projetos */
+.project-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: var(--ml-purple);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.ml-visualization {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 10px;
+    padding: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+}
+
+/* Animações para ML */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.ml-chart {
+    animation: pulse 2s infinite;
+}
+
+/* Responsividade para código */
+@media (max-width: 768px) {
+    .code-snippet {
+        font-size: 0.8rem;
+        padding: 15px;
+    }
+}
